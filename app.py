@@ -2,12 +2,15 @@ from flask import Flask, render_template
 from flask_socketio import SocketIO, emit
 import json
 import os
-socketio = SocketIO(app, async_mode='eventlet')
+
+# 🔧 First define the app
 app = Flask(__name__)
-socketio = SocketIO(app)
+
+# ✅ Now pass it to SocketIO (with eventlet)
+socketio = SocketIO(app, async_mode='eventlet', cors_allowed_origins='*')
 
 DATA_FILE = 'data.json'
-AUTH_PASSWORD = '12345687'  # 🔐 Change this to your desired password
+AUTH_PASSWORD = '12345687'  # 🔐 Change this for production security
 
 
 def load_data():
