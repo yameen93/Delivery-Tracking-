@@ -1,4 +1,6 @@
 from flask import Flask, render_template
+from flask_socketio import SocketIO
+socketio = SocketIO(app, async_mode='eventlet')
 from flask_socketio import SocketIO, emit
 import json
 import os
