@@ -1,3 +1,9 @@
-[
-    
+deliveries_list = [
+    {
+        'dispatch_date': '2025-06-01',
+        'file_number': 'FN001',
+        'party_name': 'Client A',
+        'delivery_date': '2025-06-05',
+        'status': 'Pending'
+    }
 ]
